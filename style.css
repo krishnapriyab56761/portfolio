@@ -1,0 +1,649 @@
+HEAD
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Header */
+header {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #5391e8;
+}
+
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #9917df;
+  border-bottom: 2px solid #ff9800;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Project cards */
+.project-card {
+  background: #fff;
+  padding: 20px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  border-color: #ff9800;
+}
+
+/* Skills list */
+#skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#skills li {
+  background: #ff9800;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* Contact links */
+#contact a {
+  color: #ff9800;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+}
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode header {
+  background: #333;
+}
+
+body.dark-mode nav a {
+  color: #ff9800;
+}
+/* Hidden by default */
+section.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+/* Visible when scrolled into view */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.profile-pic {
+  width: 150px;        /* size of the photo */
+  height: 150px;       /* keep it square */
+  border-radius: 50%;  /* makes it circular */
+  object-fit: cover;   /* crops nicely */
+  margin-bottom: 20px; /* spacing below */
+  border: 3px solid #ff9800; /* optional border */
+}
+/* Education Section */
+#education {
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#education h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+  border-bottom: 2px solid #6c63ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Education Cards */
+.edu-card {
+  background-color: #1a1a2e;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.6);
+}
+
+/* Year Badge */
+.edu-year {
+  background-color: #6c63ff;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* CGPA Text */
+.marks {
+  color: #ff80ab;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Certificates Section */
+#certificates {
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#certificates h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+  border-bottom: 2px solid #6c63ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Certificate Cards */
+.cert-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cert-card {
+  background-color: #1a1a2e;
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.6);
+}
+
+.cert-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cert-link:hover {
+  text-decoration: underline;
+}
+/* Projects Section */
+#projects {
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+  border-bottom: 2px solid #6c63ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Project Cards */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.project-card {
+  background-color: #1a1a2e;
+  border-radius: 12px;
+  padding: 25px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.6);
+}
+
+/* Project Header */
+/* Projects Section */
+#projects {
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+  border-bottom: 2px solid #6c63ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Project Cards */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.project-card {
+  background-color: #1a1a2e;
+  border-radius: 12px;
+  padding: 25px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.6);
+}
+
+/* Project Header */
+.project-header {
+  background-color: #cce0ff;
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.project-header h3 {
+  margin-bottom: 10px;
+}
+
+
+
+/* Recipe Header */
+.recipe-header {
+  background-image: url('images/recipe-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+/* Links */
+.links {
+  margin-top: 15px;
+}
+/* Skills Section */
+#skills {
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  padding: 60px 20px;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+  border-bottom: 2px solid #6c63ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Skill Bars */
+.skill {
+  margin-bottom: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.skill-bar {
+  background-color: #222;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6c63ff, #ff80ab);
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+/* Achievements Section */
+/* Achievements Section */
+#achievements {
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#achievements h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+  border-bottom: 2px solid #6c63ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Container for cards */
+.achievements-container {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 25px;              /* space between cards */
+}
+
+/* Individual cards */
+.achievement-card {
+  background-color: #1a1a2e;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.6);
+}
+
+/* Icon and link styling */
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ff80ab;
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cert-link:hover {
+  text-decoration: underline;
+}
+/* Activities Section */
+#activities {
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#activities h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+  border-bottom: 2px solid #6c63ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Activities Section */
+#activities {
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#activities h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+  border-bottom: 2px solid #6c63ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Activity Cards */
+/* Activities Section */
+#activities {
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#activities h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fff;
+  border-bottom: 2px solid #6c63ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.subtitle {
+  margin-bottom: 40px;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Activity Cards */
+.activities-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.activity-card {
+  background-color: #1a1a2e;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.6);
+}
+
+.activity-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+}
+
+
+
+
+
+/* Contact Section */
+#contact {
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+  border-bottom: 2px solid #6c63ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Contact Cards */
+#contact {
+  background-color: #0f0f1a;
+  color: #eaeaea;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.contact-details p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.contact-details a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 40px;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 1.8rem;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #6c63ff;
+}
+
+/* Footer Text */
+.footer-text {
+  margin-top: 40px;
+  color: #aaa;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.copyright {
+  margin-top: 10px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
